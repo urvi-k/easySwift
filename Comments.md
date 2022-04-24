@@ -1,15 +1,15 @@
 # Comments
 
-- Use cpmments to add the non-executable text as a code for reminder or note. This text will not copile by the compiler.
+- Use comments to add the non-executable text as a code for reminder or note. This text will not compile by the compiler.
 
 ## Types Of Comments
 **A) Single-line Comments (//):**
-- Use souble forward sleshes before text.
+- Use double forward sleshes before text.
 *Example:* 
 
 `// This is single line comment.`
 
-**A) Multi-line Comments (//):**
+**B) Multi-line Comments (/*  */):**
 - It is begin with forward slesh(/) followed by asterisk(`*`) and end with asterisk(`*`) followed by forward slesh(/).
 *Example:* 
 
