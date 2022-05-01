@@ -2,6 +2,7 @@
 Learn important swift concept with easy explanation and simple examples.
 
 - [Basics](#Basics)
+- [Basic Operators](https://github.com/urvi-k/EasySwift/blob/add-basic-operators/BasicOperators.md)
 
 # Basics
 
