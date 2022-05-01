@@ -7,3 +7,6 @@ Learn important swift concept with easy explanation and simple examples.
 - [Comments](https://github.com/urvi-k/EasySwift/blob/var-and-const/Comments.md)
 - [Semi Colons](https://github.com/urvi-k/EasySwift/blob/var-and-const/SemiColons.md)
 - [Integers](https://github.com/urvi-k/EasySwift/blob/var-and-const/Integers.md)
+- [Floating Point Numbers](https://github.com/urvi-k/EasySwift/blob/var-and-const/FloatingPointNumbers.md)
+- [Types](https://github.com/urvi-k/EasySwift/blob/var-and-const/Types.md)
+- [Booleans](https://github.com/urvi-k/EasySwift/blob/var-and-const/Booleans.md)
