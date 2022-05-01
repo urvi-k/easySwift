@@ -1,7 +1,9 @@
 # easySwift
 Learn important swift concept with easy explanation and simple examples.
 
-- [Basics](#variables-and-constants)
+- [Basics](#Basics)
+
+# Basics
 
 - [Variables And Constants](https://github.com/urvi-k/EasySwift/blob/var-and-const/VariablesAndConstants.md)
 - [Comments](https://github.com/urvi-k/EasySwift/blob/var-and-const/Comments.md)
@@ -10,3 +12,6 @@ Learn important swift concept with easy explanation and simple examples.
 - [Floating Point Numbers](https://github.com/urvi-k/EasySwift/blob/var-and-const/FloatingPointNumbers.md)
 - [Types](https://github.com/urvi-k/EasySwift/blob/var-and-const/Types.md)
 - [Booleans](https://github.com/urvi-k/EasySwift/blob/var-and-const/Booleans.md)
+- [Optionals](https://github.com/urvi-k/EasySwift/blob/var-and-const/Optionals.md)
+- [Error Handling](https://github.com/urvi-k/EasySwift/blob/var-and-const/ErrorHandling.md)
+- [Assertions And Preconditions](https://github.com/urvi-k/EasySwift/blob/var-and-const/AssertionsAndPreconditions.md)
