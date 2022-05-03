@@ -25,3 +25,38 @@ class Person {
     }
 }
 ```
+#
+- Let's create three variables of type `Person` which will be used to create instance on type `Person`.
+```
+var reference1: Person?
+var reference2: Person?
+var reference3: Person?
+```
+- here, `reference1`, `reference2` and `reference3` are of Optional type, that means they are by default initialized with `nil`.
+- You can now create a new `Person` instance and assign it to one of these three variables:
+```
+reference1 = Person(name: "John Appleseed")
+// Prints "John Appleseed is being initialized"
+```
+- here, at the time of creating an instance initializer will be called so it will be print `"John Appleseed is being initialized"` which is in init block of `Person` class.
+- As new `Person` instance has been assigned to `reference1` variable, so now there is strong reference from `reference1` to the `Person`.
+- Untill at least one strong refrence will be remain, ARC makes sure that this `Person` is kept in memory and isn’t deallocated.
+
+- If you assign the same `Person` instance to two more variables, two more strong references to that instance are established:
+```
+reference2 = reference1
+reference3 = reference1
+```
+
+- Now let's break two of these strong references by assigning `nil` to `reference1` and `reference2`.
+- This will not destroy `reference3` even if Original stron reference `reference1` has been broak.
+```
+reference1 = nil
+reference2 = nil
+```
+- Now let's break strong reference of`reference3`. 
+- here, the `Person` instance will be deallocated because there is no strong referance left to class `Person`.
+```
+reference3 = nil
+// Prints "John Appleseed is being deinitialized"
+```
