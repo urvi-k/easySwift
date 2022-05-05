@@ -49,7 +49,7 @@ reference3 = reference1
 ```
 
 - Now let's break two of these strong references by assigning `nil` to `reference1` and `reference2`.
-- This will not destroy `reference3` even if Original stron reference `reference1` has been broak.
+- This will not destroy `reference3` even if Original strong reference `reference1` has been broak.
 ```
 reference1 = nil
 reference2 = nil
@@ -60,3 +60,41 @@ reference2 = nil
 reference3 = nil
 // Prints "John Appleseed is being deinitialized"
 ```
+
+## Strong Reference Cycles Between Class Instances
+- In above section we have looked that ARC will not deallocate the `Person` until it is not being used anymore, And ARC is able to track the count of strong references of the perticuler instances.
+- However it is possible to write the code where the count of strong references will never be 0. This can happen when two instance hold a strong references of each other, such that each instance keeps the other alive. This is known as a strong reference cycle.
+- To resolve that we need to define one of the instance using `weak` and in some cases can use `unowned` based on syntax.
+
+- Here’s an example of how a strong reference cycle can be created by accident. This example defines two classes called `Person` and `Apartment`, which model a block of apartments and its residents:
+```
+class Person {
+    let name: String
+    init(name: String) { self.name = name }
+    var apartment: Apartment?
+    deinit { print("\(name) is being deinitialized") }
+}
+
+class Apartment {
+    let unit: String
+    init(unit: String) { self.unit = unit }
+    var tenant: Person?
+    deinit { print("Apartment \(unit) is being deinitialized") }
+}
+```
+- here, we have created `Person` class has variable `name` and `apartment` of type Optional `Apartment` which is initialized by nil by default as there can be case where a person has or has not live in any apartment.
+- here, we have created `Apartment` class has variable `unit` and `tenant` of type Optional `Person` which is initialized by nil by default as there can be case where a apartment has or has not any person live in it.
+
+- Both the class has deinitializer which prints the fact that an instance of that class is being deinitialized. It enabels us to see wather the class instanse has been deallocated as expected.
+
+- Let's define two optional variable of type `Person` and `Apartments`, as it's opetional it will initializes with `nil` by default.
+```
+var john: Person?
+var unit4A: Apartment?
+```
+- You can now create a specific `Person` instance and `Apartment` instance and assign these new instances to the `john` and `unit4A` variables:
+```
+john = Person(name: "John Appleseed")
+unit4A = Apartment(unit: "4A")
+```
+
